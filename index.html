@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data development product</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Data development product">
+  <meta name="author" content="Zhongda Su">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Data development product</h1>
+    <h2>coursera project</h2>
+    <p>Zhongda Su<br/>Master</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Goals</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>This project is using to have a slightly look into titanic data about different kinds of people survived.</li>
+<li>This project also are used to pracice about input and output</li>
+<li>Some of this project are cited from this link <a href="https://github.com/diogoaurelio/titanicShinyApp">https://github.com/diogoaurelio/titanicShinyApp</a></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Introduction to my shinny apps</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>1.This app have some inputs. These inputs decide X-lab and Y-lab and what color means.
+2.There are also tables about the data, so you can have a quick look about it.
+3.Here is a link to my app. <a href="https://alphasue.shinyapps.io/ddpproject/">https://alphasue.shinyapps.io/ddpproject/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>A picture</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In the mainpanel, you can see a picture about the relationship among age, pclass and survive</p>
+
+<pre><code class="r">trainData&lt;-read.csv(&quot;train.csv&quot;)
+library(ggplot2)
+p&lt;-ggplot(trainData,aes(x=Age,y=Pclass,color=Survived))+geom_point()
+print(p)
+</code></pre>
+
+<pre><code>## Warning: Removed 177 rows containing missing values (geom_point).
+</code></pre>
+
+<p><img src="figure/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <h4>From this picture and data model, we can find that a better class of ship have a better survive rate.</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Goals'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Introduction to my shinny apps'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='A picture'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
